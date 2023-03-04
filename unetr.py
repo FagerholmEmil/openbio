@@ -202,10 +202,8 @@ class Deconv2DBlock(nn.Module):
         return self.block(x)
 
 
-# (32, 3, 224, 224, 224)
-
 class UNETR(nn.Module):
-    def __init__(self, img_shape=(224, 224), input_dim=3, output_dim=2, embed_dim=768, patch_size=16, num_heads=12, dropout=0.1):
+    def __init__(self, img_shape=(224, 224), input_dim=3, output_dim=1, embed_dim=768, patch_size=16, num_heads=12, dropout=0.1):
         super().__init__()
         self.input_dim = input_dim
         self.output_dim = output_dim
